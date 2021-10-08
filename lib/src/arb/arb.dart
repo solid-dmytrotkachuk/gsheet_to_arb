@@ -79,7 +79,8 @@ class ArbResourceValue {
 
   bool get hasPlaceholders => placeholders.isNotEmpty;
 
-  ArbResourceValue(String text) : text = text.replaceAll('\\n', '\n') {
+  ArbResourceValue(this.text){
+
     var placeholders = findPlaceholders(text);
     if (placeholders.isNotEmpty) {
       this.placeholders.addAll(placeholders);
